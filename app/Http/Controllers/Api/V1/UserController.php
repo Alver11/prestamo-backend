@@ -64,7 +64,6 @@ class UserController extends Controller
                 "profile_path" => $imagePath,
                 "name" => $data['name'],
                 "email" => $data['email'],
-                "phone" => $data['phone'],
                 "password" => Hash::make($data['password']),
             ]);
 
@@ -121,7 +120,6 @@ class UserController extends Controller
             if($data['email'] != $userOld->email){
                 $userOld->email = $data['email'];
             }
-            $userOld->phone = $data['phone'];
             $userOld->active = $data['active'];
             if(isset($data['password']) && strlen($data['password']) > 7 && !Hash::check($data['password'], $userOld->password)) {
                 $userOld->password = Hash::make($data['password']);
