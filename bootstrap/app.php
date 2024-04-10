@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->validateCsrfTokens(except: [
-            env('APP_URL') . '/researchjspost'
+            env('APP_URL')
         ]);
         $middleware->append(Cors::class);
     })
