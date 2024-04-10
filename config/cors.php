@@ -24,7 +24,7 @@ return [
 
     'allowed_origins' => [env('CORS_DOMAIN')],
 
-    'allowed_origins_patterns' => ['*'],
+    'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
 
