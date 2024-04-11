@@ -12,7 +12,7 @@ Route::group([
 ], function () {
 
     Route::post('login', [AuthController::class, 'login']);
-    Route::get('/sanctum/csrf-cookie', [CsrfCookieController::class, 'show']);
+    Route::get('sanctum/csrf-cookie', [CsrfCookieController::class, 'show']);
 
     Route::middleware('auth:sanctum')->group(function () {
         Route::get('user', [AuthController::class, 'user']);
