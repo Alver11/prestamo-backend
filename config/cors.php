@@ -22,7 +22,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['walabi.com.py', '*.walabi.com.py'],
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
