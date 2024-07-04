@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -29,6 +30,11 @@ class User extends Authenticatable
         'google_id',
         'facebook_id',
     ];
+
+    public function clients(): BelongsToMany
+    {
+        return $this->belongsToMany(Client::class, 'client_user');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

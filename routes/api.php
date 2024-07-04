@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\ClientController;
+use App\Http\Controllers\Api\V1\DepartmentController;
+use App\Http\Controllers\Api\V1\InterestController;
 use App\Http\Controllers\Api\V1\RoleController;
 use App\Http\Controllers\Api\V1\UserController;
 use Illuminate\Http\Request;
@@ -23,6 +26,9 @@ Route::group([
         Route::apiResources([
             'roles' => RoleController::class,
             'users' => UserController::class,
+            'departments' => DepartmentController::class,
+            'clients' => ClientController::class,
+            'interests' => InterestController::class,
         ]);
     });
 });
